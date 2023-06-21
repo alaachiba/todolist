@@ -1,8 +1,8 @@
 import Task from "./Tasks";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "../redux/Action";
-import Todolist from "./Todolist";
+import { addTask } from "../Redux/actions";
+
 
 function Input() {
   const [task, setTask] = useState("");
@@ -13,6 +13,7 @@ function Input() {
       <div>
         <form>
           <input
+            class="todo-inputs"
             value={task}
             onChange={(event) => setTask(event.target.value)}
             placeholder="enter task"
